@@ -9,8 +9,28 @@ class ChapterOneString extends StatelessWidget {
 Now we can write multiline text.
 A String starts and ends with triple Quote''';
 
+  void checkNull() {
+    String myValue;
+    String defaultFallback = 'default fallback';
+
+    final result = myValue == null ? defaultFallback : myValue;
+    print(result); // default fallback
+  }
+
+  bool letUsCheckNull() {
+    bool myValue;
+    bool defaultFallback = true;
+
+    /// if we had made the value of defaultFallback to false
+    /// the RaisedButton would not have shown itself
+
+    final result = myValue == null ? defaultFallback : myValue;
+    return result;
+  }
+
   @override
   Widget build(BuildContext context) {
+    checkNull();
     return Scaffold(
       appBar: AppBar(
         title: Text('How Flutter uses Dart'),
@@ -28,6 +48,17 @@ A String starts and ends with triple Quote''';
               height: 10,
             ),
             textWithTripleQuote(),
+            SizedBox(
+              height: 10,
+            ),
+            if (letUsCheckNull()) ...[
+              RaisedButton(
+                child: Text('Press to check null'),
+                onPressed: () {
+                  checkNull();
+                },
+              )
+            ]
           ],
         ),
       ),
