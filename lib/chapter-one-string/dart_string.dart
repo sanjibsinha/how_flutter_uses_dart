@@ -36,32 +36,39 @@ A String starts and ends with triple Quote''';
         title: Text('How Flutter uses Dart'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            textWithSingleQuote(),
-            SizedBox(
-              height: 10,
-            ),
-            textWithDoubleQuote(),
-            SizedBox(
-              height: 10,
-            ),
-            textWithTripleQuote(),
-            SizedBox(
-              height: 10,
-            ),
-            if (letUsCheckNull()) ...[
-              RaisedButton(
-                child: Text('Press to check null'),
-                onPressed: () {
-                  checkNull();
-                },
-              )
-            ]
-          ],
-        ),
+        child: _newMethod(),
       ),
+    );
+  }
+
+  Column _newMethod() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        textWithSingleQuote(),
+        SizedBox(
+          height: 10,
+        ),
+        textWithDoubleQuote(),
+        SizedBox(
+          height: 10,
+        ),
+        textWithTripleQuote(),
+        SizedBox(
+          height: 10,
+        ),
+
+        /// Again extending this collection
+        /// and adding another item using spread operator
+        if (letUsCheckNull()) ...[
+          RaisedButton(
+            child: Text('Press to check null'),
+            onPressed: () {
+              checkNull();
+            },
+          )
+        ]
+      ],
     );
   }
 
