@@ -26,14 +26,4 @@ class SmallProfileApp extends StatelessWidget {
       body: ColumnWidget(halfOfScreen: halfOfScreen, tag: tag),
     );
   }
-
-  /// a function to iterate chips dynamically
-  /// instead of mapping them to list
-  Iterable<Chip> iterateTags(List<String> items) sync* {
-    for (var item in items) {
-      yield Chip(
-        label: Text(item),
-      );
-    }
-  }
 }
