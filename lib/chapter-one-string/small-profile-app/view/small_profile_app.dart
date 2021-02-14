@@ -23,6 +23,7 @@ class SmallProfileApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Profile Page'),
       ),
+      // refactoring ColumnWidget in controler section
       body: ColumnWidget(halfOfScreen: halfOfScreen, tag: tag),
     );
   }
