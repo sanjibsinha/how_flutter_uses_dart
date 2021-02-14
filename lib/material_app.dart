@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:how_flutter_uses_dart/chapter-one-string/small_profile_app.dart';
+import 'package:how_flutter_uses_dart/chapter-one-string/small-profile-app/view/small_profile_app.dart';
 
-import 'chapter-one-string/dart_string.dart';
+// import 'chapter-one-string/dart_string.dart';
 
 class HowFlutterUsesDartApp extends StatelessWidget {
   @override
