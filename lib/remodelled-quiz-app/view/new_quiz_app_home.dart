@@ -31,6 +31,8 @@ class NewQuizAppHome extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0),
                 QuestionWidget(
+                  /// static method Provider.of<T>(context), which will behave similarly to watch
+                  ///
                   questions:
                       Provider.of<QuestionAndAnswerModel>(context).questions,
                   // questions: context.watch<QuestionAndAnswerModel>().questions,

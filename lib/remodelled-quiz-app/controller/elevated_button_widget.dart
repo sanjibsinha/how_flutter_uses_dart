@@ -10,7 +10,9 @@ class ElevatedButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () =>
-          context.read<QuestionAndAnswerModel>().incrementCounter(),
+          // context.read<QuestionAndAnswerModel>().incrementCounter(),
+          Provider.of<QuestionAndAnswerModel>(context, listen: false)
+              .incrementCounter(),
       child: Text(
         answer,
         style: TextStyle(
